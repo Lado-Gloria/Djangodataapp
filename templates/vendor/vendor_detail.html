@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>{{vendor.name }}</h4>
+    <p>{{vendor.contact}}</p>
+    <p>{{vendor.date_created}}</p>
+    <p>{{vendor.date_updated}}</p>
+</body>
+</html>
+
+name = models.CharField(max_length=255)
+    contact = models.CharField(max_length=255)
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_updated = models.DateTimeField(auto_now=True)

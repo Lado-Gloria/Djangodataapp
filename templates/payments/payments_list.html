@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <table>
+    <th>
+        <td>{{payment_method }}</td>
+        <td>{{name}}</td>
+        <td>{{amount}}</td>
+        <td>{{total_amount}}</td>
+        <td>{{payment_time}}</td>
+        <td>{{payment_date}}</td>
+        <td>{{status }}</td>
+    </th>
+
+    {% for cart in carts%}
+    <tr>
+        <td>{{payment.payment_method }}</td>
+        <td>{{payment.name}}</td>
+        <td>{{payment.amount}}</td>
+        <td>{{payment.total_amount}}</td>
+        <td>{{payment.payment_time}}</td>
+        <td>{{payment.payment_date}}</td>
+        <td>{{payment.status }}</td>
+        <!--Link to the Product Detail Page-->
+        <td><a href="{% url 'product_detail_view' id=product.id %}">View product...</a></td>
+        <td><a href="{% url 'product_edit_view' id=product.id %}"> <button>Edit</button></a></td>
+
+
+    </tr>
+    {% endfor %}
+
+  </table>  
+</body>
+</html>
+
+

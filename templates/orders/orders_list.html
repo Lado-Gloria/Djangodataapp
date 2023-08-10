@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <table>
+    <th>
+        <td>Name</td>
+        <td>orderName</td>
+        <td>orderNumber</td>
+        <td>orderTotal</td>
+        <td>messages</td>
+    </th>
+
+    {% for cart in carts%}
+    <tr>
+    <td>{{orders.name }}</td>
+    <td>{{orders.orderName}}</td>
+    <td>{{orders.orderNumber}}</td>
+    <td>{{orders.orderTotal}}</td>
+    <td>{{orders.messages }}</td>
+    <td>{{orders.date_created}}</td>
+    <td>{{orders.date_updated}}</td>
+        <!--Link to the Product Detail Page-->
+        <td><a href="{% url 'product_detail_view' id=product.id %}">View product...</a></td>
+        <td><a href="{% url 'product_edit_view' id=product.id %}"> <button>Edit</button></a></td>
+
+
+    </tr>
+    {% endfor %}
+
+  </table>  
+</body>
+</html>
+
+

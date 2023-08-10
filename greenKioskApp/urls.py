@@ -17,7 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("inventory/",include("inventory.urls")),
+    path("cart/",include("cart.urls")),
+    path("customers/",include("customers.urls")),
+    path("vendor/",include("vendor.urls")),
+    path("notification/",include("notification.urls")),
+    path("payments/",include("payments.urls")),
+    path("orders/",include("orders.urls")),
+    path("shipment/",include("shipment.urls")),
+    path("feedback/",include("feedback.urls")),
 ]
+

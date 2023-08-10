@@ -1,5 +1,7 @@
 from django.db import models
 # Create your models here.
+
+
 class Cart(models.Model):
     delivery_method = models.CharField(max_length=15)
     number_of_products = models.IntegerField()

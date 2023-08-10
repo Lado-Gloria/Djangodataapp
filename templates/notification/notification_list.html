@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <table>
+    <th>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Product Details</td>
+        <td>Edit product</td>
+    </th>
+
+    {% for cart in carts%}
+    <tr>
+        <td>{{notifcation.name }}</td>
+        <td>{{notifcation.contact}}</td>
+        <td>{{notifcation.message}}</td>
+        <!--Link to the Product Detail Page-->
+        <td><a href="{% url 'product_detail_view' id=product.id %}">View product...</a></td>
+        <td><a href="{% url 'product_edit_view' id=product.id %}"> <button>Edit</button></a></td>
+
+
+    </tr>
+    {% endfor %}
+
+  </table>  
+</body>
+</html>
+
+

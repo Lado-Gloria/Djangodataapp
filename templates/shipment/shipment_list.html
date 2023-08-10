@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <table>
+    <th>
+        <td>Delivery Choice</td>
+        <td>Name</td>
+        <td>Order Name</td>
+        <td>Order Total</td>
+        <td>Locations</td>
+        <td>Delivert Type</td>
+        <td>Total Cost</td>
+        <td>Status</td>
+        <td>Date created</td>
+        <td>Date updated</td>
+    </th>
+
+    {% for cart in carts%}
+    <tr>
+        <td>{{shipment.DELIVERY_CHOICES  }}</td>
+        <td>{{shipment.name}}</td>
+        <td>{{shipment.ordername}}</td>
+        <td>{{shipment.orderTotal}}</td>
+        <td>{{shipment.locattion}}</td>
+        <td>{{shipment.deliveryType}}</td>
+        <td>{{shipment.totalcost}}</td>
+        <td>{{shipment.status}}</td>
+        <td>{{shipment.date_craeted}}</td>
+        <td>{{shipment.date_updated}}</td>
+        <!--Link to the Product Detail Page-->
+        <td><a href="{% url 'product_detail_view' id=product.id %}">View product...</a></td>
+        <td><a href="{% url 'product_edit_view' id=product.id %}"> <button>Edit</button></a></td>
+
+
+    </tr>
+    {% endfor %}
+
+  </table>  
+</body>
+</html>
+
+
